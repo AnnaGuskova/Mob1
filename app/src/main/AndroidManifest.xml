@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    AndroidManifest.xml - главный конфигурационный файл приложения
+    Содержит информацию о пакете, компонентах и разрешениях
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.proba">
+
+    <!-- Уникальный идентификатор приложения com.example.proba -->
+    <!-- Используется в Google Play и для подписи APK -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.Proba">
+
+        <!-- Иконка приложения (из папки mipmap) -->
+        <!-- Название приложения "Проба" (из файла strings.xml) -->
+        <!-- Стиль оформления (тема приложения) -->
+
+        <!--  ГЛАВНЫЙ ЭКРАН  -->
+        <!-- MainActivity - первый экран, который видит пользователь -->
+        <!-- Запускается автоматически при открытии приложения -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <!-- intent-filter сообщает системе, с какого Activity начинать -->
+            <intent-filter>
+                <!-- MAIN - главная точка входа в приложение -->
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- LAUNCHER - иконка приложения появляется в меню телефона -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ВТОРОЙ ЭКРАН  -->
+        <!-- SecondActivity - экран с результатом авторизации -->
+        <!-- НЕ имеет intent-filter, запускается только из MainActivity -->
+        <activity android:name=".SecondActivity" />
+
+        <!-- ТРЕТИЙ ЭКРАН -->
+        <!-- ThirdActivity - дополнительный экран для демонстрации -->
+        <!-- Запускается по необходимости, есть кнопка "Назад" -->
+        <activity android:name=".ThirdActivity" />
+
+    </application>
+
+</manifest>
+    <!-- Конец манифеста -->

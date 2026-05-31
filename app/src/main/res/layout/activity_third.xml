@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Используем LinearLayout для вертикального расположения элементов -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <!-- Текстовое поле с названием третьего экрана -->
+    <!-- TextView - отображает заголовок "Третье Activity" -->
+    <!-- Размер шрифта увеличен до 20sp, жирный шрифт не используется -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Третье Activity"
+        android:textSize="20sp"
+        android:layout_marginBottom="20dp" />   <!-- Отступ снизу перед кнопкой -->
+
+    <!-- Кнопка для возврата на предыдущий экран -->
+    <!-- Button - при нажатии закрывает третье Activity -->
+    <!-- Пользователь возвращается на тот экран, откуда пришел -->
+    <Button
+        android:id="@+id/backFromThirdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back_button" />
+
+</LinearLayout>
+    <!-- Конец разметки третьего экрана -->
